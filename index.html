@@ -7,39 +7,52 @@
     <script src="script.js" defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"rel="stylesheet"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
     <title>Zian's portfolio</title>
   </head>
   <body>
     <header>
-      <nav>
-        <div class="logo">
-          <img src="images/Cat.webp" alt="logo" />
+      <nav class="navbar">
+        <div class="navbar-container">
+          <div class="navbar-logo">Zian</div>
+          <button class="navbar-toggle">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </button>
+          <ul class="navbar-menu">
+            <li><a href="#" class="active">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
         </div>
-        <div class="menu">
-          <div class="menu-icon">
-            <div class="line"></div>
-            <div class="line"></div>
-            <div class="line"></div>
-          </div>
-        </div>
-        <ul class="nav-links">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="contact.html">Contact</a></li>
-          <li><a href="links.html">Links</a></li>
-        </ul>
       </nav>
     </header>
+
+    <!-- Modal Easter Egg -->
+    <div id="easterEggModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>42069!!!!!!</h2>
+      </div>
+    </div>
 
     <main>
       <section class="wrapping">
         <div class="about-me">
           <img src="images/photo.jpg" alt="photo" class="photo" />
           <div class="my-name">
-            <h1>Pakapol (Zian) Pathumthammarong</h1>
+            <div class="name">
+              <h1>Pakapol (Zian) Pathumthammarong</h1>
+            </div>
             <p>Student Fullstack Developer .NET</p>
           </div>
         </div>
@@ -49,10 +62,17 @@
             specializes in C# and the .NET framework
           </p>
           <div class="social-links">
-            <i class="fa fa-github" style="font-size:1.5rem"></i>
-            <a href="github" class="github-link">Github</a>
-            <i class="fa fa-linkedin-square" style="font-size:1.5rem;color:rgb(67, 133, 255);"></i>
-            <a href="Linkedin" class="linkedin-link">LinkedIn</a>
+            <i class="fa fa-github" style="font-size: 1.5rem"></i>
+            <a href="https://github.com/Zianoz" class="github-link">Github</a>
+            <i
+              class="fa fa-linkedin-square"
+              style="font-size: 1.5rem; color: rgb(67, 133, 255)"
+            ></i>
+            <a
+              href="https://www.linkedin.com/in/pakapol-pathumthammarong-3b10a2252/"
+              class="linkedin-link"
+              >LinkedIn</a
+            >
           </div>
         </div>
       </section>
@@ -61,13 +81,15 @@
           <h2>Experience</h2>
           <div class="view-more">
             <a href="CV.html">View more ></a>
-          </div> 
+          </div>
         </div>
         <div class="wrapping">
           <div class="card-wrapping">
             <a href="mycv" class="card">
-              <h2>CV</h2>
-              <p>My personal CV that lists all my experiences and achievements</p>
+              <h2>Resumé/CV</h2>
+              <p>
+                My personal CV that lists all my experiences and achievements
+              </p>
             </a>
           </div>
         </div>
@@ -91,6 +113,12 @@
       </section>
     </main>
 
-    <footer></footer>
+    <footer>
+      <div class="copyright">
+        <div class="copyright-text">
+          <p>&copy; 2025 Pakapol Pathumthammarong. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
