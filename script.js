@@ -21,9 +21,8 @@ easterEgg.addEventListener('click', function() {
     }
 });
 
-  let keySequence = ''; // Stores typed numbers
-  const secretCode = '42069'; // Secret Easter egg code
-  
+  let keySequence = '';
+  const secretCode = '42069';
   const modal = document.getElementById('easterEggModal'); // Modal element
   const closeButton = document.querySelector('.close'); // Close button
   
