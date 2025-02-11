@@ -1,3 +1,19 @@
+//Function to fetch data from Github API (WIP)
+async function getGithubData(){
+  const response = await fetch('https://api.github.com/users/zianoz/repos');
+  const data = await response.json();  
+  
+  const title = document.querySelector('#project-title');
+  const about = document.querySelector('#project-about');
+
+  title.textContent = data[7].name;
+  about.textContent = data[7].description;
+  
+  console.log(data);
+}
+
+getGithubData();
+
 const navbarToggle = document.querySelector('.navbar-toggle');
 const navbarMenu = document.querySelector('.navbar-menu');
 
@@ -10,11 +26,11 @@ const easterEgg = document.querySelector('.copyright');
 let clickCount = 0;
 
 easterEgg.addEventListener('click', function() {
-    clickCount++; // Increment the click count
+    clickCount++;
     
     if (clickCount === 5) {
-      // Flip the element after 5 clicks
-      document.body.style.backgroundColor = 'gray'; // Rotate the body
+ 
+      document.body.style.backgroundColor = 'gray';
       document.body.style.color = 'white';
       document.body.style.transition = 'transform 0.5s ease-in-out';
       clickCount = 0;
@@ -23,28 +39,24 @@ easterEgg.addEventListener('click', function() {
 
   let keySequence = '';
   const secretCode = '42069';
-  const modal = document.getElementById('easterEggModal'); // Modal element
-  const closeButton = document.querySelector('.close'); // Close button
+  const modal = document.getElementById('easterEggModal');
+  const closeButton = document.querySelector('.close');
   
   document.addEventListener('keydown', function(event) {
-    keySequence += event.key; // Add pressed key to sequence
-  
-    // Keep only the last characters up to the length of the secret code
+    keySequence += event.key;
+    
     keySequence = keySequence.slice(-secretCode.length);
   
-    // If the correct sequence is typed, show the modal
     if (keySequence === secretCode) {
-      modal.style.display = 'block'; // Show the modal
-      keySequence = ''; // Reset the sequence
+      modal.style.display = 'block';
+      keySequence = '';
     }
 });
   
-  // Close modal when clicking the close button
   closeButton.addEventListener('click', function() {
-    modal.style.display = 'none'; // Hide the modal
+    modal.style.display = 'none';
 });
   
-  // Close modal when clicking outside of it
   window.addEventListener('click', function(event) {
     if (event.target === modal) {
       modal.style.display = 'none';
